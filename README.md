@@ -266,7 +266,12 @@ In this step, you deploy the API that you created to a stage called prod.
     * To run this from terminal using Curl, run the below
     ```
     $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager
-    ```   
+    ```
+    
+    * You will see below results in Postman returning "HTTPStatusCode" 200.
+      ![Result from Postman](./images/Post_list_results.jpg)
+  
+      
 3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Explore table items" button from top right, and the newly inserted item should be displayed.
 
 ![Dynamo Item](./images/dynamo-item.jpg)
